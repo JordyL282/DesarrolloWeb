@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-header">
+    Agregar Contacto
+  </div>
+  <div class="card-body">
+      <form [formGroup]="formularioContactos" (ngSubmit)="EnviarDatos()">
+          <legend>Contactanos</legend>
+          <div class="mb-3">
+            <label for=" " class="form-label">Nombre:</label>
+            <input type="text"
+                   class="form-control"  name="" formControlName="nombre" id="" aria-describedby="helpId" placeholder="Escribe tu nombre">
+          </div>
+
+        <div class="mb-3">
+          <label for=" " class="form-label">Apellido:</label>
+          <input type="text"
+                 class="form-control"  name="" formControlName="apellido" id="" aria-describedby="helpId" placeholder="Escribe tu apellido">
+        </div>
+
+        <div class="mb-3">
+          <label for=" " class="form-label">Correo:</label>
+          <input type="email"
+                 class="form-control"  name=""  formControlName="correo" id="" aria-describedby="helpId" placeholder="Escribe tu Correo">
+        </div>
+
+        <div class="mb-3">
+          <label for=" " class="form-label">Télefono:</label>
+          <input type="text"
+                 class="form-control"  name="" formControlName="telefono" id="" aria-describedby="helpId" placeholder="Escribe tu télefono">
+        </div>
+
+        <div class="mb-3">
+          <label for=" " class="form-label">Dirección</label>
+          <input type="text"
+                 class="form-control"  name="" formControlName="direccion" id="" aria-describedby="helpId" placeholder="Escribe tu dirección">
+        </div>
+
+<div class="btn-group" role="group" aria-label="">
+          <button type="submit" class="btn btn-success">Agregar</button>
+          <button type="button" class="btn btn-primary" style="margin-left: 15px">Cancelar</button>
+
+</div>
+    </form>
+  </div>
+</div>

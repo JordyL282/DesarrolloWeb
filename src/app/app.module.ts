@@ -9,6 +9,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { AgregarComponent } from './pages/contact/agregar/agregar.component';
+import { EditarComponent } from './pages/contact/editar/editar.component';
+import { MostrarComponent } from './pages/contact/mostrar/mostrar.component';
+
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,11 +24,18 @@ import { ContactComponent } from './pages/contact/contact.component';
     HomeComponent,
     MenuComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    AgregarComponent,
+    EditarComponent,
+    MostrarComponent
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
