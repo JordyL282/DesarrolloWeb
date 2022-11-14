@@ -15,6 +15,8 @@ import { MostrarComponent } from './pages/contact/mostrar/mostrar.component';
 
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from "@angular/common/http";
+import {OAuthModule} from "angular-oauth2-oidc";
+import { UnoComponent } from './uno/uno.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import {HttpClientModule} from "@angular/common/http";
     ContactComponent,
     AgregarComponent,
     EditarComponent,
-    MostrarComponent
+    MostrarComponent,
+    UnoComponent
 
   ],
   imports: [
@@ -35,7 +38,13 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    OAuthModule.forRoot({
+      resourceServer:{
+        allowedUrls:['http://localhost:8080/foo'],
+        sendAccessToken: true
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

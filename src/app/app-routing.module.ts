@@ -16,7 +16,8 @@ const routes: Routes = [
   {path: 'editar', component:EditarComponent},
   {path: 'agregar', component:AgregarComponent},
   {path: 'mostrar', component:MostrarComponent},
-  {path: 'contact', component:ContactComponent}
+  {path: 'contact', component:ContactComponent},
+  {path: '**', redirectTo:'', pathMatch:'full'}
 
 ];
 
